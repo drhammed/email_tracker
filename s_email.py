@@ -23,7 +23,8 @@ def send_email(to_address):
     msg['To'] = to_address
 
     #server
-    server_address = '127.0.0.1:5000'  # we can use the actual IP/hostname if not running locally
+    #server_address = '127.0.0.1:5000'  # we can use the actual IP/hostname if not running locally
+    server_address = 'https://email-t-df8f8d2aec1b.herokuapp.com/'
     tracking_url = f'http://{server_address}/track/{email_id}.png'
 
     # HTML with the tracking image
