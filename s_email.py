@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 import uuid
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
 
 def send_email(to_address):
@@ -22,11 +22,11 @@ def send_email(to_address):
     msg['From'] = from_address
     msg['To'] = to_address
 
-    # Replace 'your_server_address' with the actual server address
-    server_address = '127.0.0.1:5000'  # Or the actual IP/hostname if not running locally
+    #server
+    server_address = '127.0.0.1:5000'  # we can use the actual IP/hostname if not running locally
     tracking_url = f'http://{server_address}/track/{email_id}.png'
 
-    # Create the HTML part with the tracking image
+    # HTML with the tracking image
     html = f'''
     <html>
     <body>
